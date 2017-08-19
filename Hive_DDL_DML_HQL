@@ -1,0 +1,20 @@
+Explain concepts with examples
+
+Hive Data Definitions
+Data definitions are statements which describe the data structure of an object while creating/altering/deleting the object like
+databases, tables, views, partitions , etc. They usualy start with CREATE, ALTER or DELETE.
+
+An example is: CREATE TABLE good_ppl (name string, age tinyint).
+In this case, good_ppl, while it's being created, is being described (defined) as a table, which has 2 columns: name and  age. name consists of string
+values, while age consists of tinyint values.
+
+
+Hive Data Manipulations
+
+Data manipulations happen when data is modified 
+
+
+
+
+
+HiveQL Manipulations
