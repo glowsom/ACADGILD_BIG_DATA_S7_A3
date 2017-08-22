@@ -2,19 +2,23 @@ Explain concepts with examples
 
 Hive Data Definitions
 Data definitions are statements which describe the data structure of an object while creating/altering/deleting the object like
-databases, tables, views, partitions , etc. They usualy start with CREATE, ALTER or DELETE.
+databases, tables, views, partitions , etc. They usually start with CREATE, ALTER or DELETE.
 
-An example is: CREATE TABLE good_ppl (name string, age tinyint).
+An example is: CREATE TABLE good_ppl (name string, age tinyint) row format delimited fields separated by ‘,’;
 In this case, good_ppl, while it's being created, is being described (defined) as a table, which has 2 columns: name and  age. name consists of string
 values, while age consists of tinyint values.
 
 
 Hive Data Manipulations
 
-Data manipulations happen when data is modified 
+Data manipulation consists of putting/adding data into tables and/or extracting data from tables into a file system. 
 
-
-
+An example is: LOAD DATA LOCAL INPATH 'directory/file' OVERWRITE INTO TABLE table_name;
+This loads the data in file into table table_name;
 
 
 HiveQL Manipulations
+
+This consists of actions that retrieve data stored in tables within the metastore. Usually involves the modification of the data retrieved from the database before providing it as a result of the query.
+
+An example is: Select column_name, sum(other_column_name) FROM table_name GROUP BY column_name;
